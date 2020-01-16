@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="employeeId" />
+    </Key>
+    <Property Name="employeeId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="middleName" Type="varchar" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="birthday" Type="varchar" MaxLength="50" />
+    <Property Name="emergencyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emergencyAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emergencyContact" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="employeeStatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sssnum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tinnum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dateEmployed" Type="varchar" MaxLength="50" />
+    <Property Name="dateFrom" Type="varchar" MaxLength="50" />
+    <Property Name="dateTo" Type="varchar" MaxLength="50" />
+    <Property Name="signature" Type="varchar" MaxLength="50" />
+    <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="EISModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

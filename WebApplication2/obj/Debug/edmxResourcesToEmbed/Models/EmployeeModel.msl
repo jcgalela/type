@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EISModelStoreContainer" CdmEntityContainer="EISEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EISModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="middleName" ColumnName="middleName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="emergencyName" ColumnName="emergencyName" />
+          <ScalarProperty Name="emergencyAddress" ColumnName="emergencyAddress" />
+          <ScalarProperty Name="emergencyContact" ColumnName="emergencyContact" />
+          <ScalarProperty Name="employeeStatus" ColumnName="employeeStatus" />
+          <ScalarProperty Name="sssnum" ColumnName="sssnum" />
+          <ScalarProperty Name="tinnum" ColumnName="tinnum" />
+          <ScalarProperty Name="dateEmployed" ColumnName="dateEmployed" />
+          <ScalarProperty Name="dateFrom" ColumnName="dateFrom" />
+          <ScalarProperty Name="dateTo" ColumnName="dateTo" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
