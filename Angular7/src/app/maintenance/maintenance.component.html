@@ -3,13 +3,17 @@
     <hr>
     <hr>
 
-    <div class="wrapper"><h2>Employee Search</h2></div>
+    <div class="wrapper">
+        <h2>Employee Search</h2>
+    </div>
     <hr>
-    <div class="row">
-        <div class="dropdown col-md-5">
+    <div class="row" style="border: 2px solid black; padding: 10px">
+        <hr>
+        <hr>
+        <div class="dropdown col-sm-5">
             <form action="" name="FILTER">
                 <select name="filter_for">
-                    <option value="search">Search</option>
+                    <option value="search">Search All</option>
                     <option value="userName">Username</option>
                     <option value="lastName">Last Name</option>
                     <option value="email">E-Mail Address</option>
@@ -19,31 +23,44 @@
             </form>
         </div>
         <input name="searchBox" class="col-md-6">
-    </div>
-    
-
-    <!-- <div class="wrapper"> -->
-    <div>
-        <button class="button">Search</button>
-    </div>
-
-    <!-- <div class="">
-        <div class="col-md-5">
-            <app-employee></app-employee>
+        <hr>
+        <hr>
+        <div class="button">
+            <form class="search">
+                <button (click)="searchUser()" type="submit"><i class="fa fa-search"></i></button>
+            </form>
         </div>
-        <div class="col-md-7">
-            <app-employee-list></app-employee-list>
+    </div>
+    <hr>
+    <hr>
+    <form action="signup">
+        <div class="wrapper">
+            <button type="submit">Create New User</button>
         </div>
-    </div> -->
+    </form>
+    <hr>
+    <hr>
+    <table class="table-striped table text-center">
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Birthday</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of service.list">
+                <td>{{emp.employeeId}}</td>
+                <td>{{emp.firstName}}</td>
+                <td>{{emp.middleName}}</td>
+                <td>{{emp.lastName}}</td>
+                <td>{{emp.birthday}}</td>
+                <td><button (click)="onUpdate(emp)" class="btn md btn-outline-primary"><i class="fa fa-edit"></i></button>
+                    <button (click)="onDelete(emp.employeeId)" class="btn md btn-outline-danger"><i class="fa fa-trash-o"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-
-<!-- <table class="table table-hover">
-    <tr *ngFor="let emp of service.list">
-        <td (click)="populateForm(emp)">{{emp.employeeId}}</td>
-        <td (click)="populateForm(emp)">{{emp.firstName}}</td>
-        <td (click)="populateForm(emp)">{{emp.middleName}}</td>
-        <td (click)="populateForm(emp)">{{emp.lastName}}</td>
-        <td (click)="populateForm(emp)">{{emp.birthday}}</td>
-        <td (click)="onDelete(emp.employeeId)"><button class="btn sm btn-outline-danger">X</button></td>
-    </tr>
-</table> -->

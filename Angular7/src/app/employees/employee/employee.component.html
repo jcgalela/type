@@ -1,30 +1,110 @@
+<h1>Employee Information </h1>
 <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
     <div class="form-group">
-        <label>First Name</label>
-        <input name="firstName" #firstName="ngModel" [(ngModel)]="service.formData.firstName" class="form-control" required>
-        <div class="validation-error" *ngIf="firstName.invalid && firstName.touched">This field is required.</div>
-    </div>
-
-    <div class="form-group">
-        <label>Middle Name</label>
-        <input name="middleName" #middleName="ngModel" [(ngModel)]="service.formData.middleName" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label>Last Name</label>
-        <input name="lastName" #lastName="ngModel" [(ngModel)]="service.formData.lastName" class="form-control">
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label>Birthday</label>
-            <input name="birthday" #birthday="ngModel" [(ngModel)]="service.formData.birthday" class="form-control">
-        </div>
-        <div class="form-group col-md-6">
-            <label>Employee ID</label>
-            <input name="employeeId" #employeeId="ngModel" [(ngModel)]="service.formData.employeeId" class="form-control">
+        <label>Employee Status:</label>
+        <input name="employeeStatus" #employeeStatus="ngModel" [(ngModel)]="service.formData.employeeStatus" class="form-control" required>
+        <div class="validation-error" *ngIf="employeeStatus.invalid && employeeStatus.touched">This field is required.
         </div>
     </div>
     <div class="form-group">
-        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+        <label>Employee ID</label>
+        <input name="employeeId" #employeeId="ngModel" [(ngModel)]="service.formData.employeeId" class="form-control" required>
+        <div class="validation-error" *ngIf="employeeId.invalid && employeeId.touched">This field is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label>SSS Number:</label>
+        <input name="sssnum" #sssnum="ngModel" [(ngModel)]="service.formData.sssnum" class="form-control" required>
+        <div class="validation-error" *ngIf="employeeId.invalid && employeeId.touched">This field is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label>TIN Number:</label>
+        <input name="tinnum" #tinnum="ngModel" [(ngModel)]="service.formData.tinnum" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Date Employed:</label>
+        <input name="dateEmployed" #dateEmployed="ngModel" [(ngModel)]="service.formData.dateEmployed" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Effective Date:</label>
+        <div class="form-group col-md-6"><label>From:</label>
+            <input name="dateFrom" #dateFrom="ngModel" [(ngModel)]="service.formData.dateFrom" class="form-control" required>
+        </div>
+        <div class="form-group col-md-6"><label>To:</label>
+            <input name="dateTo" #dateTo="ngModel" [(ngModel)]="service.formData.dateTo" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Signature:</label>
+        <input name="signature" #signature="ngModel" [(ngModel)]="service.formData.signature" class="form-control">
+    </div>
+    <h1>Login Information </h1>
+    <div class="form-group">
+        <label>UserName:</label>
+        <input name="userName" #userName="ngModel" [(ngModel)]="service.formData.userName" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <input name="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Confirm Email:</label>
+        <input name="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Password:</label>
+        <input name="password" #password="ngModel" [(ngModel)]="service.formData.password" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Confirm Password:</label>
+        <input name="password" #password="ngModel" [(ngModel)]="service.formData.password" class="form-control" required>
+    </div>
+    <div class="row">
+        <div class="col md-6">
+            <h1>Contact Details</h1>
+            <div class="form-group">
+                <label>Image</label>
+            </div>
+            <div class="form-group">
+                <label>First Name</label>
+                <input name="firstName" #firstName="ngModel" [(ngModel)]="service.formData.firstName" class="form-control" required>
+                <div class="validation-error" *ngIf="firstName.invalid && firstName.touched">This field is required.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Middle Name</label>
+                <input name="middleName" #middleName="ngModel" [(ngModel)]="service.formData.middleName" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Last Name</label>
+                <input name="lastName" #lastName="ngModel" [(ngModel)]="service.formData.lastName" class="form-control" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Birthday</label>
+                    <input name="birthday" #birthday="ngModel" [(ngModel)]="service.formData.birthday" class="form-control" required>
+                </div>
+
+                <h5>In case of emergency, Please notify:</h5>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input name="emergencyName" #emergencyName="ngModel" [(ngModel)]="service.formData.emergencyName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input name="emergencyAddress" #emergencyAddress="ngModel" [(ngModel)]="service.formData.emergencyAddress" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Contact No.</label>
+                    <input name="emergencyContact" #emergencyContact="ngModel" [(ngModel)]="service.formData.emergencyContact" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+            </div>
+        </div>
     </div>
 </form>

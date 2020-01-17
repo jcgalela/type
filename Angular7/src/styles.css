@@ -1,30 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-.form-group>input{
-    font-weight: bolder;
-}
-.form-group>label{
+
+.form-group>input {
     font-weight: bolder;
 }
 
-button[type="submit"]{
+.form-group>label {
+    font-weight: bolder;
+}
+
+button[type="submit"] {
     background-color: #67dfd4;
     color: #fff;
-
 }
-.jumbotron{
+
+.jumbotron {
     background-color: #fff;
     padding-top: 32px;
 }
 
-table tr:hover{
+table tr:hover {
     cursor: pointer;
 }
 
-input.ng-touched.ng-invalid{
+input.ng-touched.ng-invalid {
     border-color: #dc3545;
 }
 
-div.validation-error{
+div.validation-error {
     width: 100%;
     margin-top: .25rem;
     font-size: 80%;
@@ -36,28 +38,59 @@ div.validation-error{
 }
 
 .button {
-    position: fixed;
     top: 50%;
     right: 50%;
+    width: 40px;
+    height: 25px;
 }
 
 table {
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
 .dropdown {
-    width: 200px;
+    width: 100px;
     height: 25px;
     margin: 5px;
-    text-align: center;
+    text-align: left;
     font-size: large;
 }
+
 .dropdown:focus {
     min-height: 100px;
     min-width: 150px;
-    width: auto;
-}    
+}
 
 hr {
     width: 0px;
+}
+
+form.search button {
+    box-sizing: border-box;
+    float: left;
+    width: 45px;
+    padding: 5px;
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.table>tr>tbody {
+    font-size: 14px;
+}
+
+.table>thead {
+    background: linear-gradient(30deg, #455a64, #37474f);
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 300px;
+}
+
+.navbar bg-info {
+    position: fixed;
+    text-align: center;
 }
