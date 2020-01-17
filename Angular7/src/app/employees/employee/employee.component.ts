@@ -46,12 +46,12 @@ export class EmployeeComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (form.value.employeeId == '') {
+    //if (form.value.employeeId == '') {
       this.insertRecord(form);
-    }
-    else {
-    this.updateRecord(form);
-    }
+    // }
+    // else {
+    // this.updateRecord(form);
+    // }
   }
 
   insertRecord(form: NgForm) {

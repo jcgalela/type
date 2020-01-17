@@ -10,13 +10,15 @@ import {FormsModule} from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 import { ToastrService, ToastrModule } from 'ngx-toastr';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
     EmployeeListComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    MaintenanceComponent
   ],
   imports: [
     BrowserModule,

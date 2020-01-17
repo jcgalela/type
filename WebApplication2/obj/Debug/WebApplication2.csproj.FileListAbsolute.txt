@@ -85,3 +85,4 @@ C:\Users\galelaj\source\repos\WebApplication2\WebApplication2\obj\Debug\WebAppli
 C:\Users\galelaj\source\repos\WebApplication2\WebApplication2\bin\System.Web.Cors.dll
 C:\Users\galelaj\source\repos\WebApplication2\WebApplication2\bin\System.Web.Http.Cors.dll
 C:\Users\galelaj\source\repos\WebApplication2\WebApplication2\bin\System.Web.Http.Cors.xml
+C:\Users\galelaj\source\repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojAssemblyReference.cache

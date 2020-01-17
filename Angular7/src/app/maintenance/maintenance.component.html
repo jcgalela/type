@@ -1,0 +1,49 @@
+<div class="class jumbotron">
+    <h1 class="display-4 text-center">Employee Maintenance</h1>
+    <hr>
+    <hr>
+
+    <div class="wrapper"><h2>Employee Search</h2></div>
+    <hr>
+    <div class="row">
+        <div class="dropdown col-md-5">
+            <form action="" name="FILTER">
+                <select name="filter_for">
+                    <option value="search">Search</option>
+                    <option value="userName">Username</option>
+                    <option value="lastName">Last Name</option>
+                    <option value="email">E-Mail Address</option>
+                    <option value="mobile">Mobile Number</option>
+                    <option value="" hidden>ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</option>
+                </select>
+            </form>
+        </div>
+        <input name="searchBox" class="col-md-6">
+    </div>
+    
+
+    <!-- <div class="wrapper"> -->
+    <div>
+        <button class="button">Search</button>
+    </div>
+
+    <!-- <div class="">
+        <div class="col-md-5">
+            <app-employee></app-employee>
+        </div>
+        <div class="col-md-7">
+            <app-employee-list></app-employee-list>
+        </div>
+    </div> -->
+</div>
+
+<!-- <table class="table table-hover">
+    <tr *ngFor="let emp of service.list">
+        <td (click)="populateForm(emp)">{{emp.employeeId}}</td>
+        <td (click)="populateForm(emp)">{{emp.firstName}}</td>
+        <td (click)="populateForm(emp)">{{emp.middleName}}</td>
+        <td (click)="populateForm(emp)">{{emp.lastName}}</td>
+        <td (click)="populateForm(emp)">{{emp.birthday}}</td>
+        <td (click)="onDelete(emp.employeeId)"><button class="btn sm btn-outline-danger">X</button></td>
+    </tr>
+</table> -->

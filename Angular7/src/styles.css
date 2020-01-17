@@ -30,3 +30,34 @@ div.validation-error{
     font-size: 80%;
     color: #dc3545;
 }
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+}
+
+table {
+    border: 3px solid black;
+}
+
+.dropdown {
+    width: 200px;
+    height: 25px;
+    margin: 5px;
+    text-align: center;
+    font-size: large;
+}
+.dropdown:focus {
+    min-height: 100px;
+    min-width: 150px;
+    width: auto;
+}    
+
+hr {
+    width: 0px;
+}
