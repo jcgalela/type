@@ -1,0 +1,23 @@
+    h1 {
+        border-bottom: 2px black;
+        text-align: center;
+    }
+    
+    .form-group>input {
+        font-weight: bolder;
+    }
+    
+    .form-group>label {
+        font-weight: bolder;
+    }
+    
+    button[type="submit"] {
+        background-color: #67dfd4;
+        color: #fff;
+    }
+    
+    div.form-group {
+        padding: 25px;
+        float: center;
+        margin: inherit;
+    }

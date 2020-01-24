@@ -1,21 +1,5 @@
 import { Routes } from '@angular/router';
-
+import { MaintenanceComponent} from './maintenance/maintenance.component';
 import { EmployeesComponent } from './employees/employees.component';
 
-export const appRoutes: Routes = [
-    {
-        path: '',
-        redirectTo: 'maintenance',
-        pathMatch: 'full',
-    },
-    {
-        path: '',
-        component: EmployeesComponent,
-        children: [
-            {
-                path: '',
-                loadChildren: './employees/employee/employee.component'
-            }
-        ]
-    }
-]
+export const appRoutes: Routes = []

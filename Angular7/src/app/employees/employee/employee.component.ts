@@ -62,7 +62,6 @@ export class EmployeeComponent implements OnInit {
 
     });
   }
-
   updateRecord(form: NgForm) {
     this.service.putEmployee(form.value).subscribe(res => {
       this.toastr.info('Updated successfully.', 'Employee Register')

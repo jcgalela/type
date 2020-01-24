@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Employee } from './employee.model';
 import { HttpClient } from "@angular/common/http"
-import { fromEventPattern } from 'rxjs';
+import { fromEventPattern, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,19 +14,24 @@ export class EmployeeService {
   constructor( private http : HttpClient) { }
 
   postEmployee(formData : Employee) {
-    return this.http.post(this.rootURL + '/SampleEmployees', formData);
+    return this.http.post(this.rootURL + '/Employees', formData);
   }
 
   refreshList()  {
-    this.http.get(this.rootURL + '/SampleEmployees')
+    this.http.get(this.rootURL + '/Employees')
     .toPromise().then(res => this.list = res as Employee[])
   }
   
   putEmployee(formData : Employee) {
-    return this.http.put(this.rootURL + '/SampleEmployees/' + formData.employeeId, formData);
+    return this.http.put(this.rootURL + '/Employees/' + formData.employeeId, formData);
   }
 
   deleteEmployee(id : number) {
-    return this.http.delete(this.rootURL + '/SampleEmployees/' + id)
+    return this.http.delete(this.rootURL + '/Employees/' + id)
   }
+
+  updateEmployee(id: any)  {
+    return this.http.get(this.rootURL + '/Employees', id)
+  }
+
 }

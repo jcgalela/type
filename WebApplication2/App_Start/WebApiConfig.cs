@@ -8,10 +8,14 @@ namespace WebApplication2
 {
     public static class WebApiConfig
     {
+
         public static void Register(HttpConfiguration config)
         {
-            config.EnableCors(new EnableCorsAttribute("http://localhost:4200", headers: "*", methods: "*"));
             // Web API configuration and services
+            //EnableCorsAttribute cors = new EnableCorsAttribute("http://localhost:4200/", "*", "*");
+            //config.EnableCors(cors);
+            config.EnableCors(new EnableCorsAttribute("http://localhost:4200", headers: "*", methods: "*"));
+
 
             // Web API routes
             config.MapHttpAttributeRoutes();

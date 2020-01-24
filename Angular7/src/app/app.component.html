@@ -2,12 +2,10 @@
     <span class="navbar-brand text-light" routerLink="/">Employee Information System</span>
     <span class="ml-auto">
         <button class="btn btn-info mr-2" routerLink="/">Login</button>
-        <button class="btn btn-info" routerLink="/Maintenance">Employee Maintenance</button>
+        <button class="btn btn-info" routerLink="/maintenance">Employee Maintenance</button>
     </span>
 </header>
-<div class="container">
-    <app-maintenance></app-maintenance>
-</div>
+<router-outlet></router-outlet>
 <footer class="navbar bg-info">
     <span class="m-auto text-light">Copyright © 2020 - Ratatat</span>
 </footer>

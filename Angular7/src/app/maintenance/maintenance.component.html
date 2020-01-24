@@ -18,7 +18,7 @@
                     <option value="lastName">Last Name</option>
                     <option value="email">E-Mail Address</option>
                     <option value="mobile">Mobile Number</option>
-                    <option value="" hidden>ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</option>
+                    <option value="" hidden>ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</option>
                 </select>
             </form>
         </div>
@@ -35,7 +35,7 @@
     <hr>
     <form action="signup">
         <div class="wrapper">
-            <button type="submit">Create New User</button>
+            <button (click)="createNewUser()" type="submit">Create New User</button>
         </div>
     </form>
     <hr>
@@ -44,21 +44,21 @@
         <thead>
             <tr>
                 <th>Employee Id</th>
-                <th>First Name</th>
-                <th>Middle Name</th>
-                <th>Last Name</th>
-                <th>Birthday</th>
+                <th>User Name</th>
+                <th>Full Name</th>
+                <th>E-Mail Address</th>
+                <th>Employee Status</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let emp of service.list">
-                <td>{{emp.employeeId}}</td>
-                <td>{{emp.firstName}}</td>
-                <td>{{emp.middleName}}</td>
-                <td>{{emp.lastName}}</td>
-                <td>{{emp.birthday}}</td>
-                <td><button (click)="onUpdate(emp)" class="btn md btn-outline-primary"><i class="fa fa-edit"></i></button>
+                <td (click)="populateForm(emp)">{{emp.employeeId}}</td>
+                <td (click)="populateForm(emp)">{{emp.userName}}</td>
+                <td (click)="populateForm(emp)">{{emp.firstName}} {{emp.lastName}}</td>
+                <td (click)="populateForm(emp)">{{emp.email}}</td>
+                <td (click)="populateForm(emp)">{{emp.employeeStatus}}</td>
+                <td><button (click)="updateRecord(emp.employeeId)" class="btn md btn-outline-primary"><i class="fa fa-edit"></i></button>
                     <button (click)="onDelete(emp.employeeId)" class="btn md btn-outline-danger"><i class="fa fa-trash-o"></i></button></td>
             </tr>
         </tbody>

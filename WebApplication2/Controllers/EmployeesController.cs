@@ -7,14 +7,16 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
+    
     public class EmployeesController : ApiController
     {
-        private EISEntities db = new EISEntities();
+        readonly EISEntities db = new EISEntities();
 
         // GET: api/Employees
         public IQueryable<Employee> GetEmployees()
@@ -22,18 +24,18 @@ namespace WebApplication2.Controllers
             return db.Employees;
         }
 
-        //// GET: api/Employees/5
-        //[ResponseType(typeof(Employee))]
-        //public IHttpActionResult GetEmployee(string id)
-        //{
-        //    Employee employee = db.Employees.Find(id);
-        //    if (employee == null)
-        //    {
-        //        return NotFound();
-        //    }
+        // GET: api/Employees/5
+        [ResponseType(typeof(Employee))]
+        public IHttpActionResult GetEmployee(string id)
+        {
+            Employee employee = db.Employees.Find(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(employee);
-        //}
+            return Ok(employee);
+        }
 
         // PUT: api/Employees/5
         [ResponseType(typeof(void))]
